@@ -1,4 +1,8 @@
-# planer
+# planer-multi-lang
+Package forked from [lever/planer](https://github.com/lever/planer) to update the functionality support for many languages.
+
+-------------------
+
 Remove reply quotations from emails.
 
 At [lever](https://github.com/lever) we are into simple machines. 
@@ -10,7 +14,7 @@ Planer does not do signatures, though there is a [node port](https://github.com/
 # Installation
 Use npm to install planer (add `-g` if you would like it to be global):
 
-`npm install planer`
+`npm install planer-multi-lang`
 
 # Usage
 
@@ -35,6 +39,63 @@ msgBody = 'Reply!\n<div>\nOn 11-Apr-2011, at 6:54 PM, Bob &lt;bob@example.com&gt
 actualMessage = planer.extractFrom(msgBody, 'text/html', window.document);
 console.log(actualMessage) # "<html><body>Reply!\n</body></html>";
 ```
+
+# Languages covered:
+## On {date}, {somebody} wrote: && On {date} wrote {somebody}:
+Arabic (على, عند)
+Swahili
+Hausa
+Yoruba
+Amharic
+Zulu
+Mandarin Chinese
+Hindi
+Bengali
+Telugu
+Urdu
+Indonesian
+Japanese
+Korean
+Vietnamese
+English (En)
+Spanish (Es)
+French (Le, La, Il)
+German (De, Auf, In, An)
+Italian (Al, I)
+Portuguese (Por)
+Russian (Ru)
+Dutch (Nl)
+Swedish (Se)
+Norwegian (No)
+Turkish
+Persian (Farsi)
+Hebrew
+## ORIGINAL_MESSAGE:
+ 
+English (Original Message, Reply Message)
+German (Ursprüngliche Nachricht, Antwort Nachricht)
+Danish (Oprindelig meddelelse, Svarmeddelelse)
+French (Message d'origine, Réponse)
+Italian (Messaggio originale, Risposta)
+Norwegian (Melding, Svar)
+For the third pattern (email header detection):
+
+## FROM_COLON_OR_DATE_COLON
+English (From, Date)
+Dutch (Van, De)
+German (Von, Datum)
+Danish (Fra, Skickat, Sendt)
+Swedish (Från, Skickat, Sendt)
+Italian (Da)
+Norwegian (Sendt)
+Arabic (من, إلى)
+Spanish (De, Para)
+Portuguese (De, Para)
+Quechua
+Guarani
+Nahuatl
+Maori
+Inuktitut
 
 # Contributing
 
